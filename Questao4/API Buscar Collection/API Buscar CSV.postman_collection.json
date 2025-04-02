@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "aea776cf-41c0-4a2c-9638-ed05c8242f28",
+		"name": "API Buscar CSV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38495717"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:5000/api/search?query=saude",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Joao\",\n    \"description\": \"bebe\",\n    \"completed\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/search?query=saude",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "saude"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:5000/api/search?query=saude",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Joao\",\n    \"description\": \"bebe\",\n    \"completed\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/search?query=saude",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "saude"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.13.0"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Apr 2025 18:59:32 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "14078"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"Bairro\": \"SANTANA\",\n        \"CEP\": \"02401000\",\n        \"CNPJ\": \"13138885000131\",\n        \"Cargo_Representante\": \"SóCIO-ADMINISTRADOR E REPRESEN\",\n        \"Cidade\": \"São Paulo\",\n        \"Complemento\": \"CONJUNTO 143 - SALA 01\",\n        \"DDD\": \"11\",\n        \"Data_Registro_ANS\": \"2011-05-05\",\n        \"Endereco_eletronico\": \"diretoria@apssaude.com.br\",\n        \"Fax\": \"\",\n        \"Logradouro\": \"RUA VOLUNTÁRIOS DA PÁTRIA\",\n        \"Modalidade\": \"Administradora de Benefícios\",\n        \"Nome_Fantasia\": \"A.P.S. SAÚDE.\",\n        \"Numero\": \"2525\",\n        \"Razao_Social\": \"A.P.S. ADMINISTRADORA DE BENEFÍCOS LTDA.\",\n        \"Regiao_de_Comercializacao\": \"4\",\n        \"Registro_ANS\": \"418030\",\n        \"Representante\": \"PERCÍVEL GAETA\",\n        \"Telefone\": \"45223468\",\n        \"UF\": \"SP\"\n    },\n    {\n        \"Bairro\": \"HIGIENOPOLIS\",\n        \"CEP\": \"01239030\",\n        \"CNPJ\": \"56298884000167\",\n        \"Cargo_Representante\": \"ADMINISTRADORA\",\n        \"Cidade\": \"São Paulo\",\n        \"Complemento\": \"SALA 13\",\n        \"DDD\": \"11\",\n        \"Data_Registro_ANS\": \"2025-01-06\",\n        \"Endereco_eletronico\": \"dayanasantos@abrangesaude.com.br\",\n        \"Fax\": \"\",\n        \"Logradouro\": \"RUA CEL. JOSÉ EUSEBIO\",\n        \"Modalidade\": \"Administradora de Benefícios\",\n        \"Nome_Fantasia\": \"ABRANGE SAÚDE\",\n        \"Numero\": \"95.0\",\n        \"Razao_Social\": \"ABRANGE ADMINISTRADORA DE BENEFICIOS LTDA.\",\n        \"Regiao_de_Comercializacao\": \"\",\n        \"Registro_ANS\": \"424242\",\n        \"Representante\": \"DAYANA DOS SANTOSDE BRITO FLORÊNCIO\",\n        \"Telefone\": \"920554400\",\n        \"UF\": \"SP\"\n    },\n    {\n        \"Bairro\": \"CENTRO\",\n        \"CEP\": \"20070020\",\n        \"CNPJ\": \"10458298000131\",\n        \"Cargo_Representante\": \"ADMINISTRADOR\",\n        \"Cidade\": \"Rio de Janeiro\",\n        \"Complemento\": \"SALA 2901\",\n        \"DDD\": \"21\",\n        \"Data_Registro_ANS\": \"2013-06-13\",\n        \"Endereco_eletronico\": \"LEONARDO@UNIMEDICASAUDE.COM\",\n        \"Fax\": \"\",\n        \"Logradouro\": \"RUA BUENOS AIRES\",\n        \"Modalidade\": \"Administradora de Benefícios\",\n        \"Nome_Fantasia\": \"AD SALUTE\",\n        \"Numero\": \"68\",\n        \"Razao_Social\": \"AD SALUTE ADMINISTRADORA DE BENEFÍCIOS LTDA\",\n        \"Regiao_de_Comercializacao\": \"5\",\n        \"Registro_ANS\": \"418901\",\n        \"Representante\": \"JOÃO CARMO DA SILVEIRA\",\n        \"Telefone\": \"35531692\",\n        \"UF\": \"RJ\"\n    },\n    {\n        \"Bairro\": \"JABAQUARA\",\n        \"CEP\": \"04321000\",\n        \"CNPJ\": \"02041808000142\",\n        \"Cargo_Representante\": \"ADMINISTRADOR\",\n        \"Cidade\": \"São Paulo\",\n        \"Complemento\": \"SALA 202 - CENTRO EMPRESARIAL ZONA SUL\",\n        \"DDD\": \"\",\n        \"Data_Registro_ANS\": \"1998-12-28\",\n        \"Endereco_eletronico\": \"planosdesaude@advanceplanos.com.br\",\n        \"Fax\": \"\",\n        \"Logradouro\": \"RUA DOS BURITIS\",\n        \"Modalidade\": \"Medicina de Grupo\",\n        \"Nome_Fantasia\": \"\",\n        \"Numero\": \"128\",\n        \"Razao_Social\": \"ADVANCE PLANOS DE SAÚDE LTDA\",\n        \"Regiao_de_Comercializacao\": \"4\",\n        \"Registro_ANS\": \"335657\",\n        \"Representante\": \"JOSÉ JAIR JAMES DE ARRUDA PINTO\",\n        \"Telefone\": \"\",\n        \"UF\": \"SP\"\n    },\n    {\n        \"Bairro\": \"PEIXINHOS\",\n        \"CEP\": \"53230971\",\n        \"CNPJ\": \"57522360000170\",\n        \"Cargo_Representante\": \"ADMINISTRADOR\",\n        \"Cidade\": \"Olinda\",\n        \"Complemento\": \"BLOCO D\",\n        \"DDD\": \"81\",\n        \"Data_Registro_ANS\": \"2024-12-16\",\n        \"Endereco_eletronico\": \"jjppcc@gmail.com\",\n        \"Fax\": \"\",\n        \"Logradouro\": \"AVENIDA PRESIDENTE KENNEDY\",\n        \"Modalidade\": \"Medicina de Grupo\",\n        \"Nome_Fantasia\": \"AIRES OPERADORA DE SAUDE \",\n        \"Numero\": \"1001.0\",\n        \"Razao_Social\": \"AIRES OPERADORA DE SAUDE LTDA\",\n        \"Regiao_de_Comercializacao\": \"\",\n        \"Registro_ANS\": \"424285\",\n        \"Representante\": \"JOSE PEREIRA DA COSTA\",\n        \"Telefone\": \"992463135\",\n        \"UF\": \"PE\"\n    },\n    {\n        \"Bairro\": \"SAO JOAO\",\n        \"CEP\": \"16025050\",\n        \"CNPJ\": \"06258813000162\",\n        \"Cargo_Representante\": \"REPRESENTANTE\",\n        \"Cidade\": \"Araçatuba\",\n        \"Complemento\": \"\",\n        \"DDD\": \"\",\n        \"Data_Registro_ANS\": \"2009-07-03\",\n        \"Endereco_eletronico\": \"reginaldo.alcancesaude@gmail.com\",\n        \"Fax\": \"\",\n        \"Logradouro\": \"RUA CUSSY DE ALMEIDA JUNIOR\",\n        \"Modalidade\": \"Medicina de Grupo\",\n        \"Nome_Fantasia\": \"ALCANCE SAÚDE\",\n        \"Numero\": \"1931\",\n        \"Razao_Social\": \"ALCANCE SAÚDE LTDA\",\n        \"Regiao_de_Comercializacao\": \"6\",\n        \"Registro_ANS\": \"416975\",\n        \"Representante\": \"VALDECIR DONIZETE LOCATELLI\",\n        \"Telefone\": \"\",\n        \"UF\": \"SP\"\n    },\n    {\n        \"Bairro\": \"SETOR COMERCIAL SUL\",\n        \"CEP\": \"78550029\",\n        \"CNPJ\": \"20459346000160\",\n        \"Cargo_Representante\": \"SóCIO GERENTE\",\n        \"Cidade\": \"Sinop\",\n        \"Complemento\": \"1º ANDAR, SALA 03\",\n        \"DDD\": \"66\",\n        \"Data_Registro_ANS\": \"2015-12-09\",\n        \"Endereco_eletronico\": \"\",\n        \"Fax\": \"\",\n        \"Logradouro\": \"AVENIDA DAS SIBIPIRUNAS\",\n        \"Modalidade\": \"Odontologia de Grupo\",\n        \"Nome_Fantasia\": \"DENTALMED\",\n        \"Numero\": \"2656\",\n        \"Razao_Social\": \"ALPHA DENTAL PLANO DE SAUDE LTDA ME\",\n        \"Regiao_de_Comercializacao\": \"5\",\n        \"Registro_ANS\": \"419982\",\n        \"Representante\": \"IVAN DALL\\\" STELLA COSTA JÚNIOR\",\n        \"Telefone\": \"35310070\",\n        \"UF\": \"MT\"\n    },\n    {\n        \"Bairro\": \"CERQUEIRA CESAR\",\n        \"CEP\": \"01419909\",\n        \"CNPJ\": \"62511019000150\",\n        \"Cargo_Representante\": \"PRESIDENTE\",\n        \"Cidade\": \"São Paulo\",\n        \"Complemento\": \"11 ANDAR SALA 111\",\n        \"DDD\": \"11\",\n        \"Data_Registro_ANS\": \"1999-01-15\",\n        \"Endereco_eletronico\": \"regulatorio@bluemedsaude.com.br\",\n        \"Fax\": \"\",\n        \"Logradouro\": \"ALAMEDA SANTOS\",\n        \"Modalidade\": \"Medicina de Grupo\",\n        \"Nome_Fantasia\": \"ALVORECER\",\n        \"Numero\": \"1827\",\n        \"Razao_Social\": \"ALVORECER - ASSOCIAÇÃO DE SOCORROS MÚTUOS\",\n        \"Regiao_de_Comercializacao\": \"4\",\n        \"Registro_ANS\": \"344800\",\n        \"Representante\": \"SILVIO JOSÉ FERRAZ TAVARES\",\n        \"Telefone\": \"30169409\",\n        \"UF\": \"SP\"\n    },\n    {\n        \"Bairro\": \"TAQUARA\",\n        \"CEP\": \"22740362\",\n        \"CNPJ\": \"56307500000125\",\n        \"Cargo_Representante\": \"SOCIO ADMINISTRADOR\",\n        \"Cidade\": \"Rio de Janeiro\",\n        \"Complemento\": \"\",\n        \"DDD\": \"21\",\n        \"Data_Registro_ANS\": \"2024-12-02\",\n        \"Endereco_eletronico\": \"leonardo@unimedicasaude.com\",\n        \"Fax\": \"\",\n        \"Logradouro\": \"ESTRADA DO TINDIBA\",\n        \"Modalidade\": \"Medicina de Grupo\",\n        \"Nome_Fantasia\": \"AMAZIL   \",\n        \"Numero\": \"1630\",\n        \"Razao_Social\": \"AMAZIL ASSISTENCIA MEDICA DO BRASIL LTDA\",\n        \"Regiao_de_Comercializacao\": \"\",\n        \"Registro_ANS\": \"424234\",\n        \"Representante\": \"ADEBEEL DE SOUSA AVES\",\n        \"Telefone\": \"999434833\",\n        \"UF\": \"RJ\"\n    },\n    {\n        \"Bairro\": \"SÃO BRAZ\",\n        \"CEP\": \"66060575\",\n        \"CNPJ\": \"16926969000128\",\n        \"Cargo_Representante\": \"REPRESENTANTE LEGAL\",\n        \"Cidade\": \"Belém\",\n        \"Complemento\": \"\",\n        \"DDD\": \"91\",\n        \"Data_Registro_ANS\": \"2013-10-03\",\n        \"Endereco_eletronico\": \"amasaude@amazoniaplanos.com.br\",\n        \"Fax\": \"32495686\",\n        \"Logradouro\": \"TRAVESSA NOVE DE JANEIRO\",\n        \"Modalidade\": \"Medicina de Grupo\",\n        \"Nome_Fantasia\": \"PLANO AMAZÔNIA SAÚDE\",\n        \"Numero\": \"1295\",\n        \"Razao_Social\": \"AMAZÔNIA PLANOS DE SAÚDE LTDA\",\n        \"Regiao_de_Comercializacao\": \"6\",\n        \"Registro_ANS\": \"419052\",\n        \"Representante\": \"GILBERTO OSAMU YAMAMOTO\",\n        \"Telefone\": \"31847650\",\n        \"UF\": \"PA\"\n    },\n    {\n        \"Bairro\": \"LIBERDADE \",\n        \"CEP\": \"76803883\",\n        \"CNPJ\": \"46614535000153\",\n        \"Cargo_Representante\": \"SOCIO - ADMINISTRADOR\",\n        \"Cidade\": \"Porto Velho\",\n        \"Complemento\": \"SALA 2715C\",\n        \"DDD\": \"69\",\n        \"Data_Registro_ANS\": \"2022-10-03\",\n        \"Endereco_eletronico\": \"financeiro@operadoravivavida.com.br\",\n        \"Fax\": \"\",\n        \"Logradouro\": \"AVENIDA CALAMA\",\n        \"Modalidade\": \"Medicina de Grupo\",\n        \"Nome_Fantasia\": \"VIVA VIDA\",\n        \"Numero\": \"2715\",\n        \"Razao_Social\": \"AME VVIDA PLANOS DE SAUDE INTEGRADO LTDA.\",\n        \"Regiao_de_Comercializacao\": \"\",\n        \"Registro_ANS\": \"423351\",\n        \"Representante\": \"ROMILDA VIANA DE PAES\",\n        \"Telefone\": \"93324444\",\n        \"UF\": \"RO\"\n    },\n    {\n        \"Bairro\": \"CENTRO\",\n        \"CEP\": \"36010360\",\n        \"CNPJ\": \"17143876000190\",\n        \"Cargo_Representante\": \"DIRETORA ADMINISTRATIVA E FINANCEIRA\",\n        \"Cidade\": \"Juiz de Fora\",\n        \"Complemento\": \"\",\n        \"DDD\": \"32\",\n        \"Data_Registro_ANS\": \"1998-12-22\",\n        \"Endereco_eletronico\": \"amesaude24h@terra.com.br\",\n        \"Fax\": \"32155201\",\n        \"Logradouro\": \"RUA SAMPAIO\",\n        \"Modalidade\": \"Medicina de Grupo\",\n        \"Nome_Fantasia\": \"AME-SISTEMA DE SAÚDE 24 HORAS\",\n        \"Numero\": \"376\",\n        \"Razao_Social\": \"AME-ASSISTÊNCIA MÉDICA A EMPRESAS LTDA\",\n        \"Regiao_de_Comercializacao\": \"6\",\n        \"Registro_ANS\": \"304531\",\n        \"Representante\": \"REGINA MARIA AGUIAR DE SOUZA FELLET\",\n        \"Telefone\": \"21015600\",\n        \"UF\": \"MG\"\n    },\n    {\n        \"Bairro\": \"JACAREPAGUA\",\n        \"CEP\": \"22745270\",\n        \"CNPJ\": \"04257073000114\",\n        \"Cargo_Representante\": \"SOCIA GERENTE\",\n        \"Cidade\": \"Rio de Janeiro\",\n        \"Complemento\": \"\",\n        \"DDD\": \"21\",\n        \"Data_Registro_ANS\": \"2001-03-16\",\n        \"Endereco_eletronico\": \"amep.operadora@uol.com.br\",\n        \"Fax\": \"\",\n        \"Logradouro\": \"RUA ARAGUAIA\",\n        \"Modalidade\": \"Medicina de Grupo\",\n        \"Nome_Fantasia\": \"AMEP FREGUESIA OPERADORA DE PLANOS DE SAUDE LTDA\",\n        \"Numero\": \"13\",\n        \"Razao_Social\": \"AMEP FREGUESIA OPERADORA DE PLANO DE SAUDE LTDA\",\n        \"Regiao_de_Comercializacao\": \"4\",\n        \"Registro_ANS\": \"413330\",\n        \"Representante\": \"ANA MARLI VIDEIRA PEIXOTO FAZZINI\",\n        \"Telefone\": \"39104000\",\n        \"UF\": \"RJ\"\n    },\n    {\n        \"Bairro\": \"VILA GEA\",\n        \"CEP\": \"04692010\",\n        \"CNPJ\": \"67839969000121\",\n        \"Cargo_Representante\": \"SÓCIO DIRETOR\",\n        \"Cidade\": \"São Paulo\",\n        \"Complemento\": \"3º ANDAR\",\n        \"DDD\": \"11\",\n        \"Data_Registro_ANS\": \"1998-12-24\",\n        \"Endereco_eletronico\": \"diretoria.financeira@ameplansaude.com.br\",\n        \"Fax\": \"\",\n        \"Logradouro\": \"RUA UBATU MIRIM\",\n        \"Modalidade\": \"Medicina de Grupo\",\n        \"Nome_Fantasia\": \"AMEPLAN ASSITENCIA MÉDICA PLANEJADA  LTDA.\",\n        \"Numero\": \"45\",\n        \"Razao_Social\": \"AMEPLAN ASSISTÊNCIA MÉDICA PLANEJADA LTDA\",\n        \"Regiao_de_Comercializacao\": \"2\",\n        \"Registro_ANS\": \"394734\",\n        \"Representante\": \"ALI HUSSEIN  IBRAHIN TAHA\",\n        \"Telefone\": \"33219700\",\n        \"UF\": \"SP\"\n    },\n    {\n        \"Bairro\": \"VILA SANTISTA\",\n        \"CEP\": \"12941030\",\n        \"CNPJ\": \"15131148000132\",\n        \"Cargo_Representante\": \"DIRETOR \",\n        \"Cidade\": \"Atibaia\",\n        \"Complemento\": \"1º ANDAR\",\n        \"DDD\": \"\",\n        \"Data_Registro_ANS\": \"2012-10-08\",\n        \"Endereco_eletronico\": \"marcos.carvalho@amha.com.br\",\n        \"Fax\": \"\",\n        \"Logradouro\": \"RUA DOUTOR LUIZ ALBERTO VIEIRA DOS SANTO\",\n        \"Modalidade\": \"Medicina de Grupo\",\n        \"Nome_Fantasia\": \"AMHA SAUDE S/A\",\n        \"Numero\": \"141\",\n        \"Razao_Social\": \"AMHA SAUDE S/A\",\n        \"Regiao_de_Comercializacao\": \"5\",\n        \"Registro_ANS\": \"418587\",\n        \"Representante\": \"JOSE JAIR JAMES DE ARRUDA PINTO\",\n        \"Telefone\": \"\",\n        \"UF\": \"SP\"\n    },\n    {\n        \"Bairro\": \"VILA HARO\",\n        \"CEP\": \"18015000\",\n        \"CNPJ\": \"29174910000172\",\n        \"Cargo_Representante\": \"Representante Perante ANS\",\n        \"Cidade\": \"Sorocaba\",\n        \"Complemento\": \"\",\n        \"DDD\": \"15\",\n        \"Data_Registro_ANS\": \"2019-06-13\",\n        \"Endereco_eletronico\": \"juridico@amhemed.com.br\",\n        \"Fax\": \"\",\n        \"Logradouro\": \"RUA PEDRO JOSÉ SENGER\",\n        \"Modalidade\": \"Medicina de Grupo\",\n        \"Nome_Fantasia\": \"AMHE MED\",\n        \"Numero\": \"230\",\n        \"Razao_Social\": \"AMHE MED ASSISTENCIA A SAUDE LTDA - EPP\",\n        \"Regiao_de_Comercializacao\": \"6\",\n        \"Registro_ANS\": \"421731\",\n        \"Representante\": \"MARCIO ALVES\",\n        \"Telefone\": \"30351030\",\n        \"UF\": \"SP\"\n    },\n    {\n        \"Bairro\": \"CENTRO\",\n        \"CEP\": \"20020906\",\n        \"CNPJ\": \"41077489000187\",\n        \"Cargo_Representante\": \"SOCIO - ADMINISTRADOR\",\n        \"Cidade\": \"Rio de Janeiro\",\n        \"Complemento\": \"Grupo 2501\",\n        \"DDD\": \"21\",\n        \"Data_Registro_ANS\": \"2021-04-06\",\n        \"Endereco_eletronico\": \"sidney.junior@amplasaude.com\",\n        \"Fax\": \"\",\n        \"Logradouro\": \"Av. Nilo Peçanha\",\n        \"Modalidade\": \"Medicina de Grupo\",\n        \"Nome_Fantasia\": \"AMPLA  \",\n        \"Numero\": \"50\",\n        \"Razao_Social\": \"AMPLA PLANOS DE SAUDE LTDA\",\n        \"Regiao_de_Comercializacao\": \"4\",\n        \"Registro_ANS\": \"422720\",\n        \"Representante\": \"SIDNEY STORCH DUTRA JUNIOR\",\n        \"Telefone\": \"39235406\",\n        \"UF\": \"RJ\"\n    },\n    {\n        \"Bairro\": \"CENTRO\",\n        \"CEP\": \"30411023\",\n        \"CNPJ\": \"43047552000168\",\n        \"Cargo_Representante\": \"SOCIO ADMINISTRADOR \",\n        \"Cidade\": \"Betim\",\n        \"Complemento\": \"SALA 201\",\n        \"DDD\": \"31\",\n        \"Data_Registro_ANS\": \"2023-11-14\",\n        \"Endereco_eletronico\": \"amaral.diego@gmail.com\",\n        \"Fax\": \"\",\n        \"Logradouro\": \"RUA INCONFIDÊNCIA \",\n        \"Modalidade\": \"Medicina de Grupo\",\n        \"Nome_Fantasia\": \"VYDA SAUDE\",\n        \"Numero\": \"488\",\n        \"Razao_Social\": \"AMPLITUDE PLANOS DE SAUDE LTDA \",\n        \"Regiao_de_Comercializacao\": \"6\",\n        \"Registro_ANS\": \"423858\",\n        \"Representante\": \"DIEGO ALVES AMARAL \",\n        \"Telefone\": \"39235406\",\n        \"UF\": \"MG\"\n    },\n    {\n        \"Bairro\": \"JARDIM DA BARRAGEM I\",\n        \"CEP\": \"72920004\",\n        \"CNPJ\": \"45981176000100\",\n        \"Cargo_Representante\": \"DIRETOR- PRESIDENTE\",\n        \"Cidade\": \"Águas Lindas de Goiás\",\n        \"Complemento\": \"JARDIM DA BARRAGEM I\",\n        \"DDD\": \"\",\n        \"Data_Registro_ANS\": \"2022-08-26\",\n        \"Endereco_eletronico\": \"financeiro@anafesaude.com.br\",\n        \"Fax\": \"\",\n        \"Logradouro\": \"QUADRA 02 LOTE 03 1º ANDAR PARTE \",\n        \"Modalidade\": \"Autogestão\",\n        \"Nome_Fantasia\": \"ANAFE SAUDE\",\n        \"Numero\": \"9.0\",\n        \"Razao_Social\": \"ANAFE SAUDE\",\n        \"Regiao_de_Comercializacao\": \"\",\n        \"Registro_ANS\": \"423319\",\n        \"Representante\": \"FLAVIO MURILO PINTO SIVINI\",\n        \"Telefone\": \"\",\n        \"UF\": \"GO\"\n    },\n    {\n        \"Bairro\": \"ARAÇATUBA\",\n        \"CEP\": \"83430000\",\n        \"CNPJ\": \"03013779000178\",\n        \"Cargo_Representante\": \"Presidente\",\n        \"Cidade\": \"Campina Grande do Sul\",\n        \"Complemento\": \"SALA PRÓXIMA AO PRONTO SOCORRO\",\n        \"DDD\": \"41\",\n        \"Data_Registro_ANS\": \"2021-07-29\",\n        \"Endereco_eletronico\": \"atendimento@planodesaudeangeli.com.br\",\n        \"Fax\": \"\",\n        \"Logradouro\": \"RODOVIA DO CAQUI\",\n        \"Modalidade\": \"Medicina de Grupo\",\n        \"Nome_Fantasia\": \"\",\n        \"Numero\": \"1150\",\n        \"Razao_Social\": \"ANGELI SISTEMAS DE SAUDE S.A.\",\n        \"Regiao_de_Comercializacao\": \"5\",\n        \"Registro_ANS\": \"421871\",\n        \"Representante\": \"PEDRO ERNESTO CARON\",\n        \"Telefone\": \"35154099\",\n        \"UF\": \"PR\"\n    }\n]"
+				}
+			]
+		}
+	]
+}

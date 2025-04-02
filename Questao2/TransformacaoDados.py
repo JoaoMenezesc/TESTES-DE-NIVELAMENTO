@@ -13,7 +13,7 @@ def extrair_pdf_do_zip(zip_filename):
             print("Erro: Nenhum arquivo encontrado no ZIP.")
             return None
         
-        pdf_filename = zip_files[0]  # Pega o primeiro PDF encontrado
+        pdf_filename = zip_files[0]  
         extracted_path = f"extraido_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"
         zipf.extract(pdf_filename, path=".")
         os.rename(pdf_filename, extracted_path)
@@ -49,7 +49,6 @@ def extrair_e_transformar_pdf(pdf_path, zip_filename):
         zipf.write(output_csv, os.path.basename(output_csv))
     print(f"Arquivo ZIP gerado: {output_zip}")
     
-    # Remover arquivos temporários
     os.remove(pdf_path)
     os.remove(output_csv)
     print("Arquivos temporários removidos.")

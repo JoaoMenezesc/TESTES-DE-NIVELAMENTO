@@ -5,7 +5,7 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "*"}})  
-csv_path = r"C:\Users\jovmd\Documents\Projetos\Python\Teste-de-Nivelamento\Questao3\arquivos csv\Operadoras\relatorio.csv"
+csv_path = r"C:\Users\jovmd\Documents\Projetos\Python\TESTES-DE-NIVELAMENTO\Questao3\arquivos csv\Operadoras\relatorio.csv"
 
 if not os.path.exists(csv_path):
     raise FileNotFoundError(f"Arquivo CSV não encontrado: {csv_path}")

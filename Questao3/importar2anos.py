@@ -10,7 +10,7 @@ DB_HOST = "localhost"
 DB_PORT = "5432"
 
 
-DIR_CSV = r"/home/joao/Documentos/Teste/Questao3/arquivos csv/2anos"
+DIR_CSV = r"C:\Users\jovmd\Documents\Projetos\Python\TESTES-DE-NIVELAMENTO\Questao3\arquivos csv\2anos"
 
 
 try:

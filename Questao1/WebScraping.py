@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import os
 import zipfile
+import shutil
 
 def baixar_e_compactar_pdfs(url, download_dir="downloads", zip_filename="anexos.zip"):
     if not os.path.exists(download_dir):
@@ -40,6 +41,8 @@ def baixar_e_compactar_pdfs(url, download_dir="downloads", zip_filename="anexos.
 
     print(f"Arquivos compactados: {zip_filename}")
 
-url = "https://www.gov.br/ans/pt-br/acesso-a-informacao/participacao-da-sociedade/atualizacao-do-rol-de-procedimentos"
+    shutil.rmtree(download_dir)
+    print(f"Pasta {download_dir} excluída.")
 
+url = "https://www.gov.br/ans/pt-br/acesso-a-informacao/participacao-da-sociedade/atualizacao-do-rol-de-procedimentos"
 baixar_e_compactar_pdfs(url)
